@@ -1,4 +1,4 @@
-def empirical_hpd(values, conf=0.05):
+def hpd(values, conf=0.05):
     """
     Assuming a **unimodal** distribution, returns the 0.95 highest posterior
     density (HPD) interval for a set of samples from a posterior distribution.
@@ -28,12 +28,12 @@ def empirical_hpd(values, conf=0.05):
     #print "nnn=", n
     return [x[nnn], x[n-nn+nnn]]
 
-def empirical_mode(values,frac_1sigma=5):
+def mode(values,frac_1sigma=5):
 
   # first work out what precision level we care about - what is the 1 sigma width?
 
 
-  sigma1 = empirical_hpd(values,0.6827)
+  sigma1 = hpd(values,0.6827)
 
   careabout = np.diff(sigma1)/frac_1sigma
 
@@ -45,7 +45,7 @@ def empirical_mode(values,frac_1sigma=5):
 
   for i in range(0,100):
     start = start/1.1
-    new_sigma1 = empirical_hpd(values,start)
+    new_sigma1 = hpd(values,start)
     new_mode = np.mean(new_sigma1)
 #    print 'new_sigma',new_sigma1
 #    print new_mode

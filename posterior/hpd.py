@@ -1,3 +1,5 @@
+import numpy as np
+
 def hpd(values, conf=0.05):
     """
     Assuming a **unimodal** distribution, returns the 0.95 highest posterior

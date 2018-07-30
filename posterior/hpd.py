@@ -1,6 +1,6 @@
 import numpy as np
 
-def hpd(values, conf=0.05):
+def hpd(values, conf=0.95):
     """
     Assuming a **unimodal** distribution, returns the 0.95 highest posterior
     density (HPD) interval for a set of samples from a posterior distribution.

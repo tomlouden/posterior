@@ -1,4 +1,4 @@
 # -*- coding: utf-8 -*-
 
-from .plots import *
-from .hpd import *
+from posterior.plots import *
+from posterior.hpd import *

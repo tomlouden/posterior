@@ -4,7 +4,7 @@ from fitsio import FITS as fFITS
 from fitsio import read_header as fread_header
 import matplotlib.pyplot as plt
 from scipy.ndimage.filters import gaussian_filter1d
-import corner 
+#import corner 
 import math
 
 # some tools for posterior inference and sanity checking

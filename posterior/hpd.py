@@ -34,6 +34,9 @@ def mode(values,frac_1sigma=5):
 
   # first work out what precision level we care about - what is the 1 sigma width?
 
+  if len(values) == 1:
+  	return values
+
 
   sigma1 = hpd(values,0.6827)
 
